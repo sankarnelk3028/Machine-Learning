@@ -1,3 +1,7 @@
+# Streamlit application
+
+# You can run this app by running the command `streamlit run streamlit_app.py` in the terminal.
+# Import necessary libraries
 import os
 import numpy as np
 import pickle
