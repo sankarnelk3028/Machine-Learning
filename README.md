@@ -1,1 +1,0 @@
-This project features an interactive web application built with Streamlit for predicting the performance of cricket players in One Day Internationals (ODIs). The model leverages historical data from 20th-century ODI players to forecast player performance based on key batting and bowling statistics.
