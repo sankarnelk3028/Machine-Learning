@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 import streamlit as st
 
-## Load the model with error handling
+# Load the model with error handling
 model_path = '/home/sankar/Downloads/Project /Final/Performance.pkl'
 try:
     with open(model_path, 'rb') as file:
@@ -29,7 +29,7 @@ st.subheader("""
 """)
 
 # Sidebar inputs with cricket icons
-st.sidebar.image("https://t4.ftcdn.net/jpg/06/15/06/81/360_F_615068142_3siXSo1TWv7ebrf7OR0XdHurjzkcpJE3.jpg", width=200)  # Replace with actual URL or local path
+st.sidebar.image("https://t4.ftcdn.net/jpg/06/15/06/81/360_F_615068142_3siXSo1TWv7ebrf7OR0XdHurjzkcpJE3.jpg", width=200)
 st.sidebar.title("Cricket Player Stats Input")
 
 # Input fields with clear labels and explanations
@@ -51,12 +51,12 @@ Innings_Overs_Bowled = Number_of_overs_bowled + (Balls_bowled_last_over / 10)
 
 # Ensure max values for sliders are valid
 if Innings_Runs_Scored > 0:
-    max_boundary_fours = max(Innings_Runs_Scored // 4, 1)  # Ensure at least 1
+    max_boundary_fours = max(Innings_Runs_Scored // 4, 1) 
     Innings_Boundary_Fours = st.sidebar.slider(
         "Boundary Fours", min_value=0, max_value=max_boundary_fours, value=0, step=1
     )
 
-    max_boundary_sixes = max((Innings_Runs_Scored - (Innings_Boundary_Fours * 4)) // 6, 0)  # Ensure at least 0
+    max_boundary_sixes = max((Innings_Runs_Scored - (Innings_Boundary_Fours * 4)) // 6, 0)
     Innings_Boundary_Sixes = st.sidebar.slider(
         "Boundary Sixes", min_value=0, max_value=max_boundary_sixes, value=0, step=1
     )
